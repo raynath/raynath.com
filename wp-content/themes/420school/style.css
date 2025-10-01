@@ -1,0 +1,64 @@
+/*
+Theme Name: 420.school
+Theme URI: https://420.school
+Author: 420.school
+Author URI: https://420.school
+Description: Minimal WordPress theme for 420.school
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+Text Domain: 420school
+*/
+
+/* Base styles */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: #0000ff; /* blue */
+	color: #ffffff;
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.site-header,
+.site-footer {
+	padding: 16px;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.15);
+}
+
+.site-title {
+	margin: 0;
+	font-size: 20px;
+}
+
+.site-title a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.site-content {
+	padding: 24px;
+}
+
+.wp-block-image img,
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #ffffff;
+	line-height: 1.2;
+}
+
+p {
+	line-height: 1.6;
+}
+
