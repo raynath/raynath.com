@@ -1,0 +1,84 @@
+/* Base styles for Raynath theme */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-muted: #555555;
+  --color-accent: #2b6cb0;
+  --container-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+.site-title {
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1.125rem;
+}
+.primary-nav .menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 16px; }
+.primary-nav .menu a { text-decoration: none; color: var(--color-text); opacity: 0.85; }
+.primary-nav .menu a:hover { opacity: 1; color: var(--color-accent); }
+
+.site-content { padding-bottom: 48px; }
+.site-footer { border-top: 1px solid #eee; padding: 32px 0; color: var(--color-muted); }
+
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  color: white;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+}
+.hero .inner { position: relative; z-index: 1; padding: 40px 16px; }
+.hero h1 { margin: 0 0 8px; font-size: clamp(2rem, 6vw, 3rem); }
+.hero .tagline { margin: 0; font-size: clamp(1rem, 3.5vw, 1.25rem); opacity: 0.95; }
+
+.entry { padding: 32px 0; }
+.entry .container { max-width: 800px; }
+.entry h1 { font-size: 2rem; margin: 0 0 16px; }
+.entry img { max-width: 100%; height: auto; }
+
+.post-list { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.post-card { border: 1px solid #eee; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+.post-card .thumb { aspect-ratio: 16 / 9; background: #f6f6f6; }
+.post-card .content { padding: 16px; }
+.post-card .meta { color: var(--color-muted); font-size: 0.875rem; }
